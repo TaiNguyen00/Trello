@@ -16,13 +16,21 @@ module.exports = {
     'react-refresh'
   ],
   rules: {
+    // react
     'react-refresh/only-export-components': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react/prop-types': 0,
     'react/display-name': 0,
-
-    // 'no-console': 1, // when project is building, clean code, simple is no console.log :(
+    // MUI
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@mui/*/*/*"]
+      }
+    ],
+    // Common
+    // 'no-console': 1, // when project is building, clean code, simple is no-console.log :(
     // 'no-lonely-if': 1, //check clean code else-if
     'no-unused-vars': 1, // check var when not using
     'no-trailing-spaces': 1,
